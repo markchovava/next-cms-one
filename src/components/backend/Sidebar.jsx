@@ -206,11 +206,13 @@ const Sidebar = () => {
                   ? 
                   <ul className='pl-4 transition'>
                     <li className='mb-1'>
-                      <Link href='/backend/settings/access-level' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                      <Link href='/backend/settings/access-level' 
+                      className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> Access Level</Link>
                     </li>
                     <li className='mb-1'>
-                      <Link href='/backend/settings/appinfo' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                      <Link href='/backend/settings/appinfo' 
+                      className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> App Info</Link>
                     </li>
                   </ul>
