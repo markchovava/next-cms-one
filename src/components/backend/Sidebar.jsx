@@ -13,7 +13,7 @@ const Sidebar = () => {
         <section className='w-[20vw] min-h-[100vh] text-white bg-slate-900'>
         {/**** SIDEBAR TOP ****/}
         <div className='pt-6 pb-4 border-b border-slate-300 mb-4'>
-          <h2 className='flex items-center justify-center'>
+          <h2 className='flex items-center justify-start px-4'>
             <Link className='flex justify-start items-center gap-3 text-xl font-semibold' href='#'>
               <MdContentPaste className='text-2xl' /> 
               <span className=''>CMS-ONE</span>
@@ -107,11 +107,11 @@ const Sidebar = () => {
                   ? 
                   <ul className='pl-4 transition'>
                     <li className='mb-1'>
-                      <Link href='/backend/pages' className='flex justify-start items-center gap-1'>
+                      <Link href='/backend/pages' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> View All</Link>
                     </li>
                     <li className='mb-1'>
-                      <Link href='/backend/pages/add' className='flex justify-start items-center gap-1'>
+                      <Link href='/backend/pages/add' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> Add</Link>
                     </li>
                   </ul>
@@ -140,12 +140,78 @@ const Sidebar = () => {
                   ? 
                   <ul className='pl-4 transition'>
                     <li className='mb-1'>
-                      <Link href='/backend/posts' className='flex justify-start items-center gap-1'>
+                      <Link href='/backend/posts' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> View All</Link>
                     </li>
                     <li className='mb-1'>
-                      <Link href='/backend/posts/add' className='flex justify-start items-center gap-1'>
+                      <Link href='/backend/posts/add' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> Add</Link>
+                    </li>
+                  </ul>
+                  : null }
+              </div>
+            </li>
+
+            {/* SECTION */}
+            <li className='pb-2'>
+              <div className=''>
+                <Link href='#' onClick={() => {
+                    setIsActive(() => isActive.media == true ? {media: false} : {media: true})
+                    //console.log(isActive.dashboard)
+                  }}
+                  className='flex justify-between items-center mb-2'> 
+                    Media
+                  <span className='flex'>
+                    {isActive.media == true ?
+                      <BiChevronUp className='text-lg' />
+                    :
+                      <BiChevronDown className='text-lg' />
+                    }  
+                  </span>
+                </Link>
+                { isActive.media == true 
+                  ? 
+                  <ul className='pl-4 transition'>
+                    <li className='mb-1'>
+                      <Link href='/backend/posts' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                        <BiChevronRight /> View All</Link>
+                    </li>
+                    <li className='mb-1'>
+                      <Link href='/backend/posts/add' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                        <BiChevronRight /> Add</Link>
+                    </li>
+                  </ul>
+                  : null }
+              </div>
+            </li>
+
+            {/* SECTION */}
+            <li className='pb-2'>
+              <div className=''>
+                <Link href='#' onClick={() => {
+                    setIsActive(() => isActive.settings == true ? {settings: false} : {settings: true})
+                    //console.log(isActive.dashboard)
+                  }}
+                  className='flex justify-between items-center mb-2'> 
+                    Settings
+                  <span className='flex'>
+                    {isActive.settings == true ?
+                      <BiChevronUp className='text-lg' />
+                    :
+                      <BiChevronDown className='text-lg' />
+                    }  
+                  </span>
+                </Link>
+                { isActive.settings == true 
+                  ? 
+                  <ul className='pl-4 transition'>
+                    <li className='mb-1'>
+                      <Link href='/backend/settings/access-level' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                        <BiChevronRight /> Access Level</Link>
+                    </li>
+                    <li className='mb-1'>
+                      <Link href='/backend/settings/appinfo' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                        <BiChevronRight /> App Info</Link>
                     </li>
                   </ul>
                   : null }

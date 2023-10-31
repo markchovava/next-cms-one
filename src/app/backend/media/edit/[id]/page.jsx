@@ -1,6 +1,10 @@
-import React from 'react'
+import { BackendContextState } from '@/context/Backend/BackendContext';
+
 
 function Edit() {
+  const {setPageName} = BackendContextState()
+  setPageName(() => 'Edit Media');
+
   return (
     <div>Edit</div>
   )
