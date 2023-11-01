@@ -173,11 +173,11 @@ const Sidebar = () => {
                   ? 
                   <ul className='pl-4 transition'>
                     <li className='mb-1'>
-                      <Link href='/backend/posts' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                      <Link href='/backend/media' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> View All</Link>
                     </li>
                     <li className='mb-1'>
-                      <Link href='/backend/posts/add' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
+                      <Link href='/backend/media/add' className='flex justify-start items-center gap-1 transition-all hover:translate-x-2'>
                         <BiChevronRight /> Add</Link>
                     </li>
                   </ul>
