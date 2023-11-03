@@ -1,12 +1,6 @@
-"use client"
-import { BackendContextState } from "@/context/Backend/BackendContext";
+import React from 'react'
 
-
-
-function View() {
-  const {setPageName} = BackendContextState();
-  setPageName(() => 'View Post');
-
+const View = () => {
   return (
     <div>View</div>
   )
